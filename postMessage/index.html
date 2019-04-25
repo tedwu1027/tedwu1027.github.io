@@ -16,13 +16,13 @@
     
     window.addEventListener("scroll", evt => {
       const ad = document.getElementById('ad')
-      ad.contentWindow.postMessage(JSON.stringify({
+      ad.contentWindow.postMessage({
         adEvent: {
           adId: 123,
           innerHeight: window.innerHeight,
           bounding: ad.getBoundingClientRect()
         }
-      }), location.href)
+      }, location.href)
     })
 	</script>
 </head>
