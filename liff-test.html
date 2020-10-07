@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>test</title>
+  <meta name="description" content="test">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" data-hid="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> -->
+  <script src="https://line-objects-internal.com/assets/liff/edge/2.1/sdk.js"></script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+  <script>
+    window.onload = function() {
+      // https://liff.line-beta.me/1463291728-L8XOymxX
+      const liff = window.liff
+      liff
+        .init({
+          liffId: '1463291728-Nyk1PW2k' //'1463291728-L8XOymxX'
+        }).then(() => {
+          console.log('liff ready')
+          window.open('https://today.line.me/tw/v2', '_blank')
+          setTimeout(() => {
+              window.liff.closeWindow()
+          }, 5000)
+        
+        })
+    }
+    var goToGoogle = function() {
+      window.location.href = 'https://www.google.com'
+    }
+
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      // '/6355419/Travel/Europe/France/Paris'
+      // '/69012901/beta/mid2/LD_mid2_0'
+      googletag
+          .defineSlot(
+            '/6355419/Travel/Europe/France/Paris', [300, 250], 'banner-ad')
+          .addService(googletag.pubads());
+      googletag.enableServices();
+    });
+  </script>
+</head>
+
+<body>
+  <a href="https://www.google.com"> go to Google</a>
+  <br>
+  <br>
+  <br>
+  <button onclick='goToGoogle()'> go to Google by JS</button>
+  <br>
+  <br>
+  <br>
+  <h1>Google Ad Example: </h1>
+  <div id="banner-ad" style="width: 300px; height: 250px;">
+    <script>
+      googletag.cmd.push(function() {
+        googletag.display('banner-ad');
+      });
+    </script>
+  </div>
+  <div>
+    <a href="https://www.google.com" target="_blank">go to Google _blank</a>
+  </div>
+  <div>
+    <a href="https://www.google.com" target="_top">go to Google _top</a>
+  </div>
+</body>
+</html>
