@@ -21,7 +21,11 @@
           liffId: '1550675839-LAq9lOKl' //'1463291728-L8XOymxX'
         }).then(() => {
           console.log('liff ready')
-          window.open('https://today.line.me/tw/v2', '_blank')
+          window.liff.openWindow({
+            url: 'https://today.line.me/tw/v2',
+            external: false
+          })
+//           window.open('https://today.line.me/tw/v2', '_blank')
           setTimeout(() => {
               window.liff.closeWindow()
           }, 5000)
